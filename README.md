@@ -139,7 +139,6 @@ You can also customize chatbot with different configuration
         },
     });
 </script>
-
 ```
 
 ## License
