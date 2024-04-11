@@ -486,7 +486,7 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
     socket.on('connect', () => {
       setSocketIOClientId(socket.id ?? 'default-id');
     });
-    
+
     socket.on('start', () => {
       setMessages((prevMessages) => [...prevMessages, { message: '', type: 'apiMessage' }]);
     });
