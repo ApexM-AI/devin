@@ -484,9 +484,8 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
     const socket = socketIOClient(props.apiHost as string);
 
     socket.on('connect', () => {
-      setSocketIOClientId(socket.id ?? 'default-socket-id');
+      setSocketIOClientId(socket.id ?? 'default-id');
     });
-
     
     socket.on('start', () => {
       setMessages((prevMessages) => [...prevMessages, { message: '', type: 'apiMessage' }]);
