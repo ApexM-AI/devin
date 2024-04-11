@@ -12,15 +12,15 @@ let elementUsed: Element | undefined;
 
 export const initFull = (props: BotProps & { id?: string }) => {
   destroy();
-  const fullElement = props.id ? document.getElementById(props.id) : document.querySelector('devinai-fullchatbot');
-  if (!fullElement) throw new Error('<devinai-fullchatbot> element not found.');
+  const fullElement = props.id ? document.getElementById(props.id) : document.querySelector('flowise-fullchatbot');
+  if (!fullElement) throw new Error('<flowise-fullchatbot> element not found.');
   Object.assign(fullElement, props);
   elementUsed = fullElement;
 };
 
 export const init = (props: BotProps) => {
   destroy();
-  const element = document.createElement('devinai-chatbot');
+  const element = document.createElement('flowise-chatbot');
   Object.assign(element, props);
   document.body.appendChild(element);
   elementUsed = element;
